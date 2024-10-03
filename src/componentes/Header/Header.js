@@ -15,13 +15,13 @@ const Header = () => {
             <li><Link to="/AgendaDeBox">Agenda de box</Link></li>
             <li><Link to="/EstadoDeBox">Estado de Box</Link></li>
             <li><Link to="/AdministrarCentros">Administrar centros de Atención</Link></li>
-            <li><Link href="">Administrar equipo Médico</Link></li>
-            <li><Link href="">Administrar Box</Link></li>
-            <li><Link href="">Administrar Pacientes</Link></li>
-            <li><Link href="">Modificar Agenda</Link></li>
-            <li><Link href="">Reportar Evento</Link></li>
-            <li><Link href="">Generar registro de insumo</Link></li>
-            <li><Link href="">Reporte de Box</Link></li>
+            <li><Link to="/AdministrarMedicos">Administrar equipo Médico</Link></li>
+            <li><Link to="/AdministrarBox">Administrar Box</Link></li>
+            <li><Link to="/AdministrarPacientes">Administrar Pacientes</Link></li>
+            <li><Link to="/ModificarAgenda">Modificar Agenda</Link></li>
+            <li><Link to="/ReportarEvento">Reportar Evento</Link></li>
+            <li><Link to="/GenerarRegistroInsumo">Generar registro de insumo</Link></li>
+            <li><Link to="/ReporteBox">Reporte de Box</Link></li>
         </ul>
     </header>
     )

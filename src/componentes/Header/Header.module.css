@@ -1,6 +1,6 @@
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 10px;
     background-color: #eaeae8;
@@ -28,6 +28,9 @@ header {
                 text-align: center;
             }
         }
+    }
+    >ul>li>{
+        max-width: 100px;
     }
 
     >ul>li:hover {
