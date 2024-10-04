@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Reportar Evento - Sistema de Agendamiento EduDown</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="datetime-local"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.7s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #a40000;
+            transition: background-color 0.7s ease;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .row-cols-2 .col {
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="https://static.wixstatic.com/media/0a8059_2238928883ab4c278a1231c12510b720~mv2.png/v1/fill/w_51,h_75,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0a8059_2238928883ab4c278a1231c12510b720~mv2.png" alt="Logo">
+        </a>
+        <h1>Reportes</h1>
+    </header>
+
+    <div class="container mt-4">
+        <h2>Reportar Evento - EduDown</h2>
+        <form action="EstadoDeBox.html" method="get">
+            <div class="row row-cols-2 g-3">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="box">Seleccionar Box:</label>
+                        <select id="box" name="box" required>
+                            <option value="">Seleccione un Box</option>
+                            <option value="box1">Box 1</option>
+                            <option value="box2">Box 2</option>
+                            <option value="box3">Box 3</option>
+                            <option value="box4">Box 4</option>
+                            <!-- Añadir más opciones según los Box disponibles -->
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="date">Fecha de Atención:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="time">Hora de Atención:</label>
+                        <select id="time" name="time" required>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="condiciones">Modificar Condiciones de Uso:</label>
+                        <select id="condiciones" name="condiciones">
+                            <option value="">No modificar</option>
+                            <option value="fuera_servicio">Fuera de Servicio</option>
+                            <option value="mantenimiento">En Mantenimiento</option>
+                            <!-- Añadir más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+                <div class="col" colspan="2">
+                    <div class="form-group">
+                        <label for="descripcion">Descripción del Evento:</label>
+                        <textarea id="descripcion" name="descripcion" placeholder="Describa el evento que afecta el uso del Box..." required></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            <input type="submit" value="Reportar Evento">
+        </form>
+    </div>
+
+</body>
+</html>

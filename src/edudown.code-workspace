@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay", // Puedes cambiarlo a "onWindowChange", "onWindowChange", etc.
+		"files.autoSaveDelay": 1000 // Ajusta el tiempo de demora en milisegundos
+	}
